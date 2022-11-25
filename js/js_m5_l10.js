@@ -443,11 +443,10 @@
 // ];
 
 // function salary(workers, workerName) {
-//     // const { name, salary, month } = workers;
 
-//     for (let i = 0; i < workers.length; i++) {
-//         if (workers[i].name === workerName) {
-//             return `total salary for ${workerName} is ${workers[i].salary * workers[i].month}`;
+//     for (const worker of workers) {
+//         if (worker.name === workerName) {
+//             return `total salary for ${workerName} is ${worker.salary * worker.month}`;
 //         }
 //     }
 
@@ -458,6 +457,7 @@
 // }
 
 // console.log(salary(workers, 'Dima'));
+// console.log(salary(workers));
 
 // ====================================================================================================================
 
@@ -472,26 +472,54 @@
 
 // 2 Порахувати вік всіх юзерів у яких є ключ age.
 
-// const friends = [{ name: "Anna", books: ["Bible", "Harry Potter"], age: 21 },
-//     { name: "Bob", books: ["War and peace", "Romeo and Juliet"], age: 26 },
-//     { name: "Alice", books: ["War and peace", "Romeo and Juliet"]},
-//     { name: "Oleksii", books: ["Bible","War and peace","Harry Potter",  "Romeo and Juliet"], age: 26},
-// ]
+// const friends = [
+//     { name: 'Anna', books: ['Bible', 'Harry Potter'], age: 21 },
+//     { name: 'Bob', books: ['War and peace', 'Romeo and Juliet'], age: 26 },
+//     { name: 'Alice', books: ['War and peace', 'Romeo and Juliet'] },
+//     {
+//         name: 'Oleksii',
+//         books: ['Bible', 'War and peace', 'Harry Potter', 'Romeo and Juliet'],
+//         age: 26,
+//     },
+// ];
+
+// function haveBook(friends = [], book = '') {
+//     const friendsWithBook = friends.filter(friend => friend.books.includes(book));
+
+//     return friendsWithBook.reduce(
+//         (str, friend) =>
+//             str +
+//             `(${book}) \\\ ${friend.name}${friend.age ? ' \\ age: ' + friend.age + '\n' : '\n'}`,
+//         friendsWithBook.length ? `` : `Friends whith the book is not find`
+//     );
+// }
+
+// console.log(haveBook(friends, 'Romeo and Juliet'));
+// console.log(haveBook([], 'Romeo and Juliet'));
+
+// ====================================================================================================================
+
+// ====================================================================================================================
 
 // -----------------------------------------TASK 5------------------------------------------//
+
 // Потрібно створити 4 методи об'єкту
 // 1 виводить суму на карті (назву вводимо в prompt())
 // 2 додає нову карту (назву вводимо в prompt())
 // 3 зняти з карти (назву вводимо в prompt() та суму в prompt())
 // 4 додати на карту (назву вводимо в prompt() та суму в prompt())
 
-// const bankSystem = {
-//     privat : 1000,
-//     mono : 1500,
+const bankSystem = {
+    privat: 1000,
+    mono: 1500,
+};
 
-// }
+// ====================================================================================================================
+
+// ====================================================================================================================
 
 // -----------------------------------------TASK 6------------------------------------------//
+
 // Створити функцію яка буде шукати нарциса. Головна умова нарциса знають всі, нарцис не знає нікого.
 
 // const people1 = [{
